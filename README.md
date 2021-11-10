@@ -24,6 +24,13 @@ import pickle as pkl
 with open('spatial_temporal_dataset','rb') as infile:
     datas=pkl.load(infile)
 ```
+The dataset are represented by dict, and each of them has the following meanings:
+
+1. train_set:It has three dimensions. The first dimension represents the camera index `c1` and the second dimension represents the camera index `c2`. Finally, you can get a one-dimensional list showing the walking time from `c1` to `c2`.
+2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
+3. test_set:It has three dimensions. The first dimension represents the camera index `c1` and the second dimension represents the camera index `c2`. Finally, you can get a one-dimensional list showing the walking time from `c1` to `c2`.
+4. test_y:It has the same structure as test_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
+5. distmat: The distance between different camera pairs, for example, distmat[c1][c2] represents the distance from C1 to C2.
 
 
 
