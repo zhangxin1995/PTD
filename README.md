@@ -14,7 +14,10 @@ Fig. 2:Example of Person Trajectory Dataset. The first column is the track of th
 ![Figure2](https://github.com/zhangxin1995/PTD/blob/main/images/Figure19.jpg)
 
 ## Spatial Temport Dataset
-The Spatio-Temporal dataset contains two parts: the distance between cameras and the time set when a person walks from one camera to another in the data set.
+For spatio-temporal data, it consists of a training set and testing set, within which the data are derived from of PTD's training set and testing set, respectively. 
+
+You can download this dataset through the following link: [Download](https://drive.google.com/file/d/1GPSSlPe6ZwFTNAzLOsOk1Li9DdYAvBkG/view?usp=sharing)
+
 
 
 
