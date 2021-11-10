@@ -18,6 +18,13 @@ For spatio-temporal data, it consists of a training set and testing set, within 
 
 You can download this dataset through the following link: [Download](https://drive.google.com/file/d/1GPSSlPe6ZwFTNAzLOsOk1Li9DdYAvBkG/view?usp=sharing)
 
+You can load the dataset through the following code:
+```python
+import pickle as pkl
+with open('spatial_temporal_dataset','rb') as infile:
+    datas=pkl.load(infile)
+```
+
 
 
 
