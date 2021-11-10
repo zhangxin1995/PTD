@@ -56,22 +56,23 @@ Before introducing the format of visual dataset, we should first understand seve
 5. Trajectory index. The trajectory index indicates a tracklet belongs to which trajectory.
 
 The dataset are represented by dict, and each of them has the following meanings:
-1. qcs
-2. qts
-3. qfs
-4. qls
-5. fqcs
-6. fqts
-7. fqfs
-8. fqls
-9. tcs
-10. ts
-11. gfs
-12. gls
-13. fgcs
-14. fgts
-15. fgfs
-16. fgls
+1. qcs: Camera index list of query tracklets.
+2. qts: Timestamp list of query tracklets.
+3. qfs: Feature list list of query tracklets. 
+4. qls: Person index list of query tracklets.
+5. fqcs:Camera list index of query images.
+6. fqts:Timestamp list of query images.
+7. fqfs:Feature list of query image.
+8. fqls:Person index list of query images.
+9. tcs: Camera index list of gallery tracklets.
+10. gts:Timestamp list of gallery tracklets.
+11. gfs:Feature list of  gallery tracklets.
+12. gls:Person index list of gallery tracklets.
+13. fgcs:Camera index list of gallery images.
+14. fgts:Timestamp list of gallery images.
+15. fgfs:Feature list of gallery images.
+16. fgls:Person index list of gallery images.
+17. 
 
 
 
