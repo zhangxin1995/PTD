@@ -21,7 +21,7 @@ You can download this dataset through the following link: [Download](https://dri
 You can load the dataset through the following code:
 ```python
 import pickle as pkl
-with open('spatial_temporal_dataset','rb') as infile:
+with open('spatial_temporal_dataset.pkl','rb') as infile:
     datas=pkl.load(infile)
 ```
 The dataset are represented by dict, and each of them has the following meanings:
@@ -39,7 +39,38 @@ The mapping from camera name to index can be expressed as follows:
 {'SQ0925': 5, 'SQ0924': 8, 'SQ0927': 2, 'SQ0926': 7, 'SQ0921': 6, 'SQ0923': 0, 'SQ0930': 1, 'SQ0922': 4, 'SQ0931': 3}
 ```
 
+# Trajectory Dataset
+You can download this dataset through the following link: [Download](https://drive.google.com/file/d/1GPSSlPe6ZwFTNAzLOsOk1Li9DdYAvBkG/view?usp=sharing)
 
+You can load the dataset through the following code:
+```python
+import pickle as pkl
+with open('visual_dataset.pkl','rb') as infile:
+    datas=pkl.load(infile)
+```
+Before introducing the format of visual dataset, we should first understand several indexes in the process of person retrieval.In the dataset, we have x-class indexes, which are as follows:
+1. Person ID.
+
+
+
+
+The dataset are represented by dict, and each of them has the following meanings:
+1. qcs
+2. qts
+3. qfs
+4. qls
+5. fqcs
+6. fqts
+7. fqfs
+8. fqls
+9. tcs
+10. ts
+11. gfs
+12. gls
+13. fgcs
+14. fgts
+15. fgfs
+16. fgls
 
 
 
