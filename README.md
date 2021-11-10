@@ -30,7 +30,15 @@ The dataset are represented by dict, and each of them has the following meanings
 2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
 3. test_set:It has three dimensions. The first dimension represents the camera index `c1` and the second dimension represents the camera index `c2`. Finally, you can get a one-dimensional list showing the walking time from `c1` to `c2`.
 4. test_y:It has the same structure as test_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
-5. distmat: The distance between different camera pairs, for example, distmat[c1][c2] represents the distance from C1 to C2.
+5. distmat: The distance between different camera pairs, for example, datas['distmat'][c1][c2] represents the distance from `c1` to `c2`.
+
+The mapping from camera name to index can be expressed as follows:
+
+```
+{'SQ0925': 5, 'SQ0924': 8, 'SQ0927': 2, 'SQ0926': 7, 'SQ0921': 6, 'SQ0923': 0, 'SQ0930': 1, 'SQ0922': 4, 'SQ0931': 3}
+```
+
+
 
 
 
