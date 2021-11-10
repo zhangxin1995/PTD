@@ -13,7 +13,7 @@ Fig. 2:Example of Person Trajectory Dataset. The first column is the track of th
 
 ![Figure2](https://github.com/zhangxin1995/PTD/blob/main/images/Figure19.jpg)
 
-## Spatial Temport Dataset
+## Spatial Temporal Dataset
 For spatio-temporal data, it consists of a training set and testing set, within which the data are derived from of PTD's training set and testing set, respectively. 
 
 You can download this dataset through the following link: [Download](https://drive.google.com/file/d/1GPSSlPe6ZwFTNAzLOsOk1Li9DdYAvBkG/view?usp=sharing)
@@ -26,11 +26,12 @@ with open('spatial_temporal_dataset','rb') as infile:
 ```
 The dataset are represented by dict, and each of them has the following meanings:
 
-1. train_set:It has three dimensions. The first dimension represents the camera index `c1` and the second dimension represents the camera index `c2`. Finally, you can get a one-dimensional list showing the walking time from `c1` to `c2`.
-2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
-3. test_set:It has three dimensions. The first dimension represents the camera index `c1` and the second dimension represents the camera index `c2`. Finally, you can get a one-dimensional list showing the walking time from `c1` to `c2`.
-4. test_y:It has the same structure as test_set, except that the list indicates whether the corresponding data is a positive sample. If it is 1, otherwise it is 0.
-5. distmat: The distance between different camera pairs, for example, datas['distmat'][c1][c2] represents the distance from `c1` to `c2`.
+1. train_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from `1` to `2`.
+2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if train_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, train_y[1][2][0] is 0.
+
+3. test_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from `1` to `2`.
+4. test_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if test_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, test_y[1][2][0] is 0.
+5. distmat: The distance between different camera pairs, for example, datas['distmat'][1][2] represents the distance from `1` to `2`.
 
 The mapping from camera name to index can be expressed as follows:
 
