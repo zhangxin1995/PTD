@@ -46,7 +46,7 @@ import pickle as pkl
 with open('visual_dataset.pkl','rb') as infile:
     datas=pkl.load(infile)
 ```
-Before introducing the format of visual dataset, we should first understand several indexes in the process of person retrieval.In the dataset, we have 5-class indexes, which are as follows:
+Before introducing the format of the visual dataset, we should first understand several indexes in the process of person retrieval. In the dataset, we have 5-class indexes, which are as follows:
 1. Person index. It represents the identity of pedestrians. Everyone has an unique index.
 2. Camera index. It represents the camera number, and each camera has an unique index.
 3. Camera tracklet index. It represents the index of a tracklet under a specific camera.
