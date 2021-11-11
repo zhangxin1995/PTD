@@ -1,7 +1,7 @@
 # Person Trajectory Dataset
 
 ## Description
-Person Trajectory Dataset(PTD) comes from paper `Person Retrieval with Trajectory Generation`. This is collected from a camera network of nine cameras from 8 a.m. to 8 p.m. The spatial distribution of the cameras for this dataset is shown in Fig. 1. The person image sequence acquired are then preliminarily labeled by FPN target detection and DeepSort tracking, and then the annotation results are corrected manually. The images of any person that only appears under one camera are also eliminated to ensure the persons in PTD have appeared under at least two different cameras. Some example of PTD are shown in Fig. 2. 
+Person Trajectory Dataset(PTD) comes from paper `Person Retrieval with Trajectory Generation`. This is collected from a camera network of nine cameras from 8 a.m. to 8 p.m. The spatial distribution of the cameras for this dataset is shown in Fig. 1. The person image sequence acquired are preliminarily labeled by FPN target detection and DeepSort tracking, and then the annotation results are corrected manually. The images of any person that only appears under one camera are also eliminated to ensure the persons in PTD have appeared under at least two different cameras. Some examples of PTD are shown in Fig. 2. 
 
 Fig. 1:The spatial distribution of the cameras in the Person Trajectory Dataset. For each camera, the satellite enlarged image and the camera view of the corresponding cameras are displayed. The following numbers, such as SQ0921, indicate the camera index.
 
