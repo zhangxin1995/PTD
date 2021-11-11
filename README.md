@@ -38,7 +38,7 @@ The mapping from camera name to index can be expressed as follows:
 ```
 
 ## Trajectory Dataset
-You can download this dataset through the following link: [Download]()
+You can download this dataset through the following link:
 | Feature Model | Link |
 | -----| ---- | 
 | Resnet50 |[Download]() |
@@ -49,7 +49,7 @@ You can download this dataset through the following link: [Download]()
 You can load the dataset through the following code:
 ```python
 import pickle as pkl
-with open('visual_dataset.pkl','rb') as infile:
+with open('resnet50_visual_dataset.pkl','rb') as infile:
     datas=pkl.load(infile)
 ```
 Before introducing the format of the visual dataset, we should first understand several indexes in the process of person retrieval. In the dataset, we have 5-class indexes, which are as follows:
