@@ -1,7 +1,7 @@
 # Person Trajectory Dataset
 
 ## Description
-Person Trajectory Dataset comes from paper `Person Retrieval with Trajectory Generation`. This PTD is collected from a camera network of nine cameras from 8 a.m. to 8 p.m. The spatial distribution of the cameras for this dataset is shown in Fig. 1. The person image sequence acquired are then preliminarily labeled by FPN target detection method and DeepSort tracking method, and then the annotation results are corrected manually. The images of any person that only appears under one camera are also eliminated to ensure the persons in PTD have appeared under at least two different cameras. Some example of PTD are shown in Fig. 2. 
+Person Trajectory Dataset(PTD) comes from paper `Person Retrieval with Trajectory Generation`. This is collected from a camera network of nine cameras from 8 a.m. to 8 p.m. The spatial distribution of the cameras for this dataset is shown in Fig. 1. The person image sequence acquired are then preliminarily labeled by FPN target detection and DeepSort tracking, and then the annotation results are corrected manually. The images of any person that only appears under one camera are also eliminated to ensure the persons in PTD have appeared under at least two different cameras. Some example of PTD are shown in Fig. 2. 
 
 Fig. 1:The spatial distribution of the cameras in the Person Trajectory Dataset. For each camera, the satellite enlarged image and the camera view of the corresponding cameras are displayed. The following numbers, such as SQ0921, indicate the camera index.
 
@@ -22,14 +22,14 @@ import pickle as pkl
 with open('spatial_temporal_dataset.pkl','rb') as infile:
     datas=pkl.load(infile)
 ```
-The dataset are represented by dict, and each of them has the following meanings:
+ The dataset is represented by a `dict`, and each of them has the following meanings:
 
-1. train_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from `1` to `2`.
+1. train_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
 2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if train_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, train_y[1][2][0] is 0.
 
-3. test_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from `1` to `2`.
+3. test_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
 4. test_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if test_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, test_y[1][2][0] is 0.
-5. distmat: The distance between different camera pairs, for example, datas['distmat'][1][2] represents the distance from `1` to `2`.
+5. distmat: The distance between different camera pairs, for example, datas['distmat'][1][2] represents the distance from camera index `1` to camera index `2`.
 
 The mapping from camera name to index can be expressed as follows:
 
