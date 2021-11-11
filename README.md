@@ -39,6 +39,12 @@ The mapping from camera name to index can be expressed as follows:
 
 ## Trajectory Dataset
 You can download this dataset through the following link: [Download]()
+| Feature Model | Link |
+| -----| ---- | 
+| Resnet50 |[Download]() |
+| MGN |[Download]()  |
+| PCB | [Download]() | 
+| CAP | [Download]() |
 
 You can load the dataset through the following code:
 ```python
@@ -58,8 +64,8 @@ The dataset are represented by dict, and each of them has the following meanings
 2. qts: Timestamp list of query tracklets.
 3. qfs: Feature list list of query tracklets. 
 4. qls: Person index list of query tracklets.
-5. fqcs:Camera list index of query images.
-6. tidxs: Camera tracklet index of gallery tracklets.
+5. fqcs:Camera list index list of query images.
+6. tidxs: Camera tracklet index list of gallery tracklets.
 7. fqfs:Feature list of query image.
 8. fqls:Person index list of query images.
 9. tcs: Camera index list of gallery tracklets.
@@ -69,11 +75,11 @@ The dataset are represented by dict, and each of them has the following meanings
 13. ftcs:Camera index list of gallery images.
 14. ftfs:Feature list of gallery images.
 15. ftls:Person index list of gallery images.
-16. ftidxs:Camera tracklet index of gallery images.
+16. ftidxs:Camera tracklet index list of gallery images.
 17. idx2pathidx: Map the person index to the global tracklet index.
 18. tpath2index:Map the trajectory index to the global tracklet index.
-19. qidxs: Camera tracklet index of query tracklets.
-20. fqidxs:Camera tracklet index of query images.
+19. qidxs: Camera tracklet index list of query tracklets.
+20. fqidxs:Camera tracklet index list of query images.
 
 
 
