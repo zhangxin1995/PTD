@@ -24,11 +24,10 @@ with open('spatial_temporal_dataset.pkl','rb') as infile:
 ```
  The dataset is represented by a `dict`, and each of them has the following meanings:
 
-1. train_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
-2. train_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if train_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, train_y[1][2][0] is 0.
-
-3. test_set:It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. Finally, you can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
-4. test_y:It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if test_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, test_y[1][2][0] is 0.
+1. train_set: It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. You can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
+2. train_y: It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if train_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, train_y[1][2][0] is 0.
+3. test_set: It has three dimensions. The first dimension represents the camera index `1` and the second dimension represents the camera index `2`. You can get a one-dimensional list showing the walking time from camera index `1` to camera index `2`.
+4. test_y: It has the same structure as train_set, except that the list indicates whether the corresponding data is a positive sample. For example, if test_set[1][2][0] is a postive sample, train_y[1][2][0] is 1. If train_set[1][2][0] is a negative sample, test_y[1][2][0] is 0.
 5. distmat: The distance between different camera pairs, for example, datas['distmat'][1][2] represents the distance from camera index `1` to camera index `2`.
 
 The mapping from camera name to index can be expressed as follows:
@@ -59,27 +58,27 @@ Before introducing the format of the visual dataset, we should first understand 
 4. Global tracklet index. The global index is obtained by splicing the tracklets under all cameras together.
 5. Trajectory index. The trajectory index indicates a tracklet belongs to which trajectory.
 
-The dataset are represented by dict, and each of them has the following meanings:
+The dataset are represented by a `dict`, and each of them has the following meanings:
 1. qcs: Camera index list of query tracklets.
 2. qts: Timestamp list of query tracklets.
 3. qfs: Feature list list of query tracklets. 
 4. qls: Person index list of query tracklets.
-5. fqcs:Camera list index list of query images.
+5. fqcs: Camera list index list of query images.
 6. tidxs: Camera tracklet index list of gallery tracklets.
-7. fqfs:Feature list of query image.
-8. fqls:Person index list of query images.
+7. fqfs: Feature list of query image.
+8. fqls: Person index list of query images.
 9. tcs: Camera index list of gallery tracklets.
-10. gts:Timestamp list of gallery tracklets.
-11. tfs:Feature list of  gallery tracklets.
-12. tls:Person index list of gallery tracklets.
-13. ftcs:Camera index list of gallery images.
-14. ftfs:Feature list of gallery images.
-15. ftls:Person index list of gallery images.
-16. ftidxs:Camera tracklet index list of gallery images.
+10. gts: Timestamp list of gallery tracklets.
+11. tfs: Feature list of  gallery tracklets.
+12. tls: Person index list of gallery tracklets.
+13. ftcs: Camera index list of gallery images.
+14. ftfs: Feature list of gallery images.
+15. ftls: Person index list of gallery images.
+16. ftidxs: Camera tracklet index list of gallery images.
 17. idx2pathidx: Map the person index to the global tracklet index.
 18. tpath2index:Map the trajectory index to the global tracklet index.
 19. qidxs: Camera tracklet index list of query tracklets.
-20. fqidxs:Camera tracklet index list of query images.
+20. fqidxs: Camera tracklet index list of query images.
 
 
 
