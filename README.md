@@ -1,5 +1,3 @@
-[toc]
-
 # Person Trajectory Dataset
 
 ## Description
@@ -39,7 +37,7 @@ The mapping from camera name to index can be expressed as follows:
 {'SQ0925': 5, 'SQ0924': 8, 'SQ0927': 2, 'SQ0926': 7, 'SQ0921': 6, 'SQ0923': 0, 'SQ0930': 1, 'SQ0922': 4, 'SQ0931': 3}
 ```
 
-# Trajectory Dataset
+## Trajectory Dataset
 You can download this dataset through the following link: [Download]()
 
 You can load the dataset through the following code:
@@ -61,18 +59,21 @@ The dataset are represented by dict, and each of them has the following meanings
 3. qfs: Feature list list of query tracklets. 
 4. qls: Person index list of query tracklets.
 5. fqcs:Camera list index of query images.
-6. fqts:Timestamp list of query images.
+6. tidxs: Camera tracklet index of gallery tracklets.
 7. fqfs:Feature list of query image.
 8. fqls:Person index list of query images.
 9. tcs: Camera index list of gallery tracklets.
 10. gts:Timestamp list of gallery tracklets.
-11. gfs:Feature list of  gallery tracklets.
-12. gls:Person index list of gallery tracklets.
-13. fgcs:Camera index list of gallery images.
-14. fgts:Timestamp list of gallery images.
-15. fgfs:Feature list of gallery images.
-16. fgls:Person index list of gallery images.
-17. 
+11. tfs:Feature list of  gallery tracklets.
+12. tls:Person index list of gallery tracklets.
+13. ftcs:Camera index list of gallery images.
+14. ftfs:Feature list of gallery images.
+15. ftls:Person index list of gallery images.
+16. ftidxs:Camera tracklet index of gallery images.
+17. idx2pathidx: Map the person index to the global tracklet index.
+18. tpath2index:Map the trajectory index to the global tracklet index.
+19. qidxs: Camera tracklet index of query tracklets.
+20. fqidxs:Camera tracklet index of query images.
 
 
 
