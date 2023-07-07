@@ -1,0 +1,28 @@
+method: local_CRF
+dataset:
+    path: ./data/PTD/resnet50_visual_dataset.pkl
+st_rerank: 
+  enable: False
+rerank:
+  enable: True
+  k1: 1
+  k2: 2
+  lambda: 0.8
+adj2path: rnmf
+dim: 2048
+spatiotemporal:
+    modelroot: ./model/PTD/
+    locationroot: ./data/PTD/location.json
+    name: super_MLP
+cluster_threshold: 0.07
+crf:
+    alpha: 0.82
+    u: 0.1
+    T: 1
+    nc_threshold: 0
+    u1: 1.6
+    u2: 1.47
+    threshold: 0.89
+  
+
+
