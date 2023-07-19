@@ -89,15 +89,14 @@ Please put the downloaded data file in the `data/PTD` directory under the code r
 python main.py -yaml ./config/local_crf_resnet.yaml
 ```
 
-<<<<<<< HEAD
+
 ## Citation
 ```
 Xin Zhang, Xiaohua Xie, Jianhuang Lai, Wei-Shi Zheng. Cross-camera Trajectories Help Person Retrieval in a Camera Network. IEEE Transactions on Image Processing (TIP), in press, 2023.
 ```
 
 
-=======
->>>>>>> 6eacb147ff53b7f85fb8d59650e1d2c82ff76f73
+
 
 
 
